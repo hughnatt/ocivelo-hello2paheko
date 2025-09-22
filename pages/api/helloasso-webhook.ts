@@ -11,7 +11,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
 ) {
-  console.log(req.body)
+  await fetch('https://webhook.site/b50c6073-0847-4d58-b68e-63bbdb83319d', { body: JSON.stringify(req.body), method: 'POST' })
   res.status(204).end()
 
   // const request = JSON.parse(req.body) as IHelloAssoWebhookRequest;
